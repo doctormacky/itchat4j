@@ -50,6 +50,17 @@ public class BaseMsg implements Serializable {
 	private String fromUserName;
 	private String oriContent;
 	private String fileSize;
+	
+	/**如果是群消息，该消息应该有真实的fromUserName，而不是只关心群**/
+	private String fromUserNameIfFromGroup;
+
+	public String getFromUserNameIfFromGroup() {
+		return fromUserNameIfFromGroup;
+	}
+
+	public void setFromUserNameIfFromGroup(String fromUserNameIfFromGroup) {
+		this.fromUserNameIfFromGroup = fromUserNameIfFromGroup;
+	}
 
 	public int getSubMsgType() {
 		return subMsgType;
